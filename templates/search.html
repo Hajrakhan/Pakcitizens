@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div id="main-content">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+
+                <!-- post-container -->
+                <div class="post-container">
+                <h3 class="page-heading alert alert-light "> Search: {{search_term}}</h3>
+                {% if results!=() %}
+                {% for result in results %}
+                    <div class="post-content">
+                        <div class="row">
+                            <div class="col-md-4">
+                        {% set fname = 'Upload/' + result[6] %}
+                                <div><img src="{{url_for('static',filename=fname)}}"  alt=""/></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="inner-content clearfix">
+                                    <h5><a style="color:black" href='{{params['url']}}/news/{{result[0]}}'>
+                                    {{result[1]}}</a></h5>
+                                    <small class="text-muted">
+                                        {{result[9]}}{% print(' - ') %}{{result[13]}}{% print(' ') %}{{result[14]}}{% print(' - ') %}{{result[5]}}
+                                    </small>
+                                    <p class="description">
+                                        {{result[2][0:80]}}{%print('...')%}
+                                    </p>
+                                    <button><a class='read-more pull-right' href='{{params['url']}}/news/{{result[0]}}' style="color:black">Read more</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                        <h5 class=" alert alert-warning">No record found</h5>
+                   {% endif %}
+                </div><!-- /post-container -->
+            </div>
+            <div id="sidebar" class="col-lg-4">
+                <!-- search box -->
+                <div class="search-box-container">
+                    <h5>SEARCH</h5>
+                    <form class="search-post" action="{{params['url']}}/search" method="POST">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Search .....">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-outline-success">Search</button>
+                            </span>
+                        </div>
+                        <br><br>
+                    </form>
+                </div>
+                <!-- /search box -->
+                <!-- recent posts box -->
+                <div class="recent-post-container">
+                    <h5>RECENT POSTS</h5> <br>
+                    {% for post in posts %}
+                    {% if post[0]==news_id  %}
+                    {% else %}
+                    <!-- Recent Posts in SIde bar -->
+                    <div class="recent-post zoom" href="{{params['url']}}/news/{{post[0]}}">
+                        {% set fname = 'Upload/' + post[6] %}
+                        <a class="post-img" href="{{params['url']}}/news/{{post[0]}}">
+                            <img class="rounded" href="{{params['url']}}/news/{{post[0]}}"
+                                src="{{url_for('static',filename=fname)}}" alt="" />
+                        </a><br>
+                        <div class="post-content">
+                            <br>
+                            <a style="color:black" href="{{params['url']}}/news/{{post[0]}}">
+                                <h6>{{post[1]}}{%print('...')%}</h6></a>
+                                <small class="text-muted">
+                                    {{post[9]}}{% print(' - ') %}{{post[13]}}{% print(' ') %}{{post[14]}}{% print(' - ') %}{{post[5]}}
+                                </small>
+                        </div>
+                        <br><br>
+                    </div>
+                    {% endif %}
+                   {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+            
+            {% endblock %}
+     
+

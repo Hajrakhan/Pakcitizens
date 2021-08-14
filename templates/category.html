@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Spinner waiting code -->
+	<div class="spinner-border text-dark" role="status">
+	  <span class="sr-only">Loading...</span>
+	</div>
+<!-- End of spinner -->
+ 
+
+<div class="container-fluid">
+	{% set fname = 'images/' + catimage[0][0] %}
+  <img src="{{url_for('static',filename=fname)}}" class="img-fluid" alt="Responsive image">
+</div>
+			
+<div class="container padding">
+  <!-- <img src="media/Sports.jpg" class="img-fluid" alt="Responsive image"> -->
+
+	<div class="row welcome text-center">
+		<div class="col-12">
+	<br><br>
+			<h2 class="display-5 font">Top Stories</h2>
+
+		</div>
+	</div>
+
+	<!--- Cards -->
+	<div class="card-deck">
+	{% for post in posts %}
+				<div class="col-sm-12 col-md-6 col-lg-4">
+					<div class="card">
+						{% set fname = 'Upload/' + post[6] %}
+						<img src="{{url_for('static',filename=fname)}}" class="card-img-top" alt="Chess" width="854"
+							height="175">
+						<div class="card-body">
+							<a class="text" href="{{params['url']}}/news/{{post[0]}}">
+								<h6 class="card-title font">{{post[1]}}{%print('...')%}</h6>
+							</a>
+							<p class="card-text">{{post[2][0:150]}}</p>
+							<a class="text" href="/news/{{post[0]}}"><button class="btn btn-info">Learn More</button></a>
+
+
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">
+								{{post[9]}}{% print(' - ') %}{{post[13]}}{% print(' ') %}{{post[14]}}{% print(' - ') %}
+		{{post[5]}}</small>
+
+						</div>
+					</div>
+				</div>
+	{% endfor %}
+				
+				
+			</div>
+
+			<!-- Card Ends -->
+<br><br>
+<!--- Connect -->
+<div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h3 class="font">Connect</h3>
+		</div>
+
+		<div class="col-12 social padding">
+			<a href="#"><i id="social-fb" class="fab fa-facebook-square fa-3x social"></i></a>
+			<a href="#"><i id="social-tw" class="fab fa-twitter-square fa-3x social"></i></a>
+			<a href="@"><i id="social-gp" class="fab fa-google-plus-square fa-3x social"></i></a>
+			<a href="#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div id="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- post-container -->
+                <div class="post-container">
+
+                    <br><br>
+                    {% set news_id=news[0][0] %}
+                    <div class="post-content single-post">
+                        <h3 class="card-title">{{news[0][1]}}</h3> <br>
+                        <div class="post-information">
+                            <span>
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                                {{news[0][9]}} - </span>
+                            <span>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                {{news[0][13]}} {{news[0][14]}}- </span>
+                            <span>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                {{news[0][5]}} </span>
+                        </div>
+                        <br>
+                        {% set fname = 'Upload/' + news[0][6] %}
+                        <img class="single-feature-image" src="{{ url_for('static',filename=fname) }}" alt="" />
+
+                        <p class="para">
+                            <br>
+                            {{news[0][2]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" class="col-lg-4">
+                <!-- search box -->
+                <div class="search-box-container">
+                    <h5>SEARCH</h5>
+                    <form class="search-post" action="{{params['url']}}/search" method="POST">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Search .....">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-outline-success">Search</button>
+                            </span>
+                        </div>
+                        <br><br>
+                    </form>
+                </div>
+                <!-- /search box -->
+                <!-- recent posts box -->
+                <div class="recent-post-container">
+                    <h5>RECENT POSTS</h5> <br>
+                    {% for post in posts %}
+                    {% if post[0]==news_id  %}
+                    {% else %}
+                    <!-- Recent Posts in SIde bar -->
+                    <div class="recent-post zoom" href="{{params['url']}}/news/{{post[0]}}">
+                        {% set fname = 'Upload/' + post[6] %}
+                        <a class="post-img" href="{{params['url']}}/news/{{post[0]}}">
+                            <img class="rounded" href="{{params['url']}}/news/{{post[0]}}"
+                                src="{{url_for('static',filename=fname)}}" alt="" />
+                        </a><br>
+                        <div class="post-content">
+                            <br>
+                            <a style="color:black" href="{{params['url']}}/news/{{post[0]}}">
+                                <h6>{{post[1]}}{%print('...')%}</h6></a>
+                                <small class="text-muted">
+                                    {{post[9]}}{% print(' - ') %}{{post[13]}}{% print(' ') %}{{post[14]}}{% print(' - ') %}{{post[5]}}
+                                </small>
+                        </div>
+                        <br><br>
+                    </div>
+                    {% endif %}
+                   {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

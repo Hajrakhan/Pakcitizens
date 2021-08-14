@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Admin Panel</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.css') }}">
+        
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/admin_styles.css') }}">
+
+    </head>
+    <body>
+      </div>
+        <!-- HEADER -->
+        <div id="header-admin">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- LOGO -->
+                    <div class="col-md-6">
+                        <div class="admin-logout">Welcome to Pak Citizen</div><br>
+                        <div class="admin-logout">Hello!</div>
+                        <div class="admin-logout">{{session['user']}}</div>
+                    </div>
+
+                    <!-- /LOGO -->
+                      <!-- LOGO-Out -->
+                    <div class="col-md-offset-5  col-md-1">
+                    <a href="/logout" class="admin-logout btn btn-secodary" >logout</a></button>
+                    </div>
+                    <!-- /LOGO-Out -->
+                </div>
+            </div>
+        </div>
+        <!-- /HEADER -->
+        <!-- Menu Bar -->
+        <div id="admin-menubar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                       <ul class="admin-menu">
+                            <li>
+                                <a class="" href="/home">Post</a>
+                            </li>
+                            {% if session['role']=="1": %}
+                                <li>
+                                <a href="/admin_category">Category</a>
+                            </li>
+                            <li>
+                                <a href="admin_users">Users</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Menu Bar -->
+        {% block body %}             {% endblock %}
+        <!-- Footer -->
+<div id ="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span>Pak Citizen By Uzair, Hajra, Waleed</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Footer -->
+</body>
+</html>

@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body{
+  height: 100%;
+  widows: 100%;
+  font-family: 'montserrat' sans-serif;
+  color: #222;
+}
+.card-title{
+  font-family: raleway;
+  font-weight: bold;
+}
+
+.back{
+  background-color: #00401A;
+  width: 100%;
+  height: 50%;
+
+}
+
+
+.card-desc{
+  font-family: raleway;
+}
+
+
+
+.btn-color{
+  /* background-color: #00401A; */
+  background-color: #0A3F1F;
+
+}
+.navbar{
+  padding: 0.6rem;
+}
+
+.navbar-logo {
+  width: 25px;
+}
+
+.navbar-nav li{
+  padding-right: 20px;
+}
+
+.nav-linl{
+  font-size: 1.1em !important;
+}
+
+.nav-font{
+  font-family: raleway;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.fancy-nav a{
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.fancy-nav a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+}
+
+.fancy-nav a:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+.carousel-caption{
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50);
+  font-family: raleway;
+}
+
+
+.para{
+  margin: auto;
+}
+
+.carousel-item{
+  height: 550px;
+
+}
+.carousel-item img{
+  height: 100%;
+
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  .social a{
+    font-size: 4rem;
+    padding: 2rem;
+  }
+  .carousel-item{
+    height: auto;
+  
+  }
+  .carousel-item img{
+    height: auto;
+  
+  }
+}
+@media (max-width: 576px) {
+  #main-content .single-post h2{
+      font-size: 23px;
+      font-weight: 500;
+  }
+  #main-content .single-post h2{
+      font-size: 23px;
+      font-weight: 500;
+  }
+  .carousel-item{
+    height: auto;
+  
+  }
+  .carousel-item img{
+    height: auto;
+  
+  }
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+.text{
+  text-decoration: none;
+  color: black;
+}
+
+.text a{
+  text-decoration: none;
+  color: white;
+}
+
+a:Hover{
+  text-decoration: none;
+}
+
+
+.welcome-font {
+  font-style: grome;
+  font-weight: bold;
+  margin-top: -20px;
+}
+
+.font{
+  font-family:  Geometos;
+}
+
+
+.cd{
+  border: 2px solid red;
+}
+
+.categories{
+  font-family: Geometos;
+  color: white;
+  text-align: center;
+}
+.social #icon a{
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+
+/* Modify the background color */
+
+        .navbar-custom {
+            background-color: black;
+        }
+        /* Modify brand and text color */
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom  {
+            color: White;
+        }
+        .navbar-text {
+            color: White;
+        }
+
+
+
+
+        /* Meet out team CSS */
+
+        .team {
+            text-align: center;
+            margin-top: -80px;
+        }
+
+        .section {
+            padding: 60px 0
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            position: relative;
+            margin-bottom: 40px;
+            margin-top: 0
+        }
+
+        .team .team-item {
+            text-align: left;
+            margin-bottom: 30px
+        }
+
+        .team .team-item figure {
+            position: relative;
+            overflow: hidden
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .team .team-item figure figcaption {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background: rgba(9, 9, 9, .6);
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .team .team-item figure figcaption .info {
+            position: absolute;
+            color: #fff;
+            float: left;
+            bottom: 10px;
+            left: 20px;
+            margin-left: -80px;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .team .team-item figure:hover figcaption {
+            opacity: 1
+        }
+
+        .team .team-item figure:hover figcaption .info {
+            margin-left: 0
+        }
+
+        .team .team-item figure figcaption .info h3 {
+            font-size: 20px
+        }
+
+        .team .team-item figure figcaption .info p {
+            color: #fff
+        }
+
+        .team .team-item figure:hover figcaption .social {
+            margin-bottom: 0
+        }
+
+        .team .team-item figure figcaption .social {
+            position: absolute;
+            float: right;
+            bottom: 28px;
+            margin-bottom: -80px;
+            right: 20px;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            transition: all .5s ease
+        }
+
+        .team .team-item figure figcaption .social a {
+            color: #fff;
+            font-size: 15px;
+            width: 36px;
+            height: 36px;
+            background: #3f51b5;
+
+            display: inline-block;
+            text-align: center;
+            line-height: 36px;
+            border-radius: 2px
+        }
+
+
+        /* End of meet our team CSS */
+
+
+
+        /* Social MEdia */
+        .social:hover {
+             -webkit-transform: scale(1.1);
+             -moz-transform: scale(1.1);
+             -o-transform: scale(1.1);
+         }
+         .social {
+             -webkit-transform: scale(0.8);
+             /* Browser Variations: */
+
+             -moz-transform: scale(0.8);
+             -o-transform: scale(0.8);
+             -webkit-transition-duration: 0.5s;
+             -moz-transition-duration: 0.5s;
+             -o-transition-duration: 0.5s;
+         }
+
+        /*
+            Multicoloured Hover Variations
+        */
+
+         #social-fb:hover {
+             color: #3B5998;
+         }
+         #social-tw:hover {
+             color: #4099FF;
+         }
+         #social-gp:hover {
+             color: #d34836;
+         }
+         #social-em:hover {
+             color: #f39c12;
+         }
+
+        /* End of SOcial Media */
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/

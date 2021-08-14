@@ -1,0 +1,270 @@
+/* ===================== */
+/* COMMOM CSS */
+body{
+    background: #f1f1f1;
+    font-family: sans-serif,arial,Helvetica;
+}
+.font{
+  font-family: montserrat;
+}
+
+#admin{
+  width: 50%;
+}
+
+/* a, */
+a:hover,
+a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.btn:focus,
+button:focus{
+    outline: none;
+}
+
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+h2.page-heading{
+  margin: 5px 0 30px;
+  padding: 0 5px 10px;
+  border-bottom: 2px solid #333;
+}
+
+
+/* ===================== */
+
+/* ===================== */
+/* ADMIN Panel CSS START */
+/* ===================== */
+
+#wrapper-admin{
+    padding: 100px 0 0;
+}
+
+/* img.logo{
+    width: 400%;
+    height: auto;
+    display: block;
+} */
+
+#admin{
+  width: 200px;
+}
+.pak{
+  font-family: geometos;
+}
+
+#header-admin{
+    background-color:#343A40;
+    padding: 20px 0;
+}
+
+#header-admin .admin-logout{
+    margin: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    font-family: geometos;
+    /* text-transform: uppercase; */
+    display: inline-block;
+}
+
+#admin-menubar{
+    background-color: #fff;
+}
+#admin-menubar .admin-menu{
+    font-size: 5px;
+}
+#admin-menubar .admin-menu li{
+    display: inline-block;
+    margin: 0 5px 0 0;
+    font-family: montserrat;
+}
+#admin-menubar .admin-menu li a{
+    color: 	#343A40;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 7px 15px;
+    display: block;
+    transition: all 0.3s;
+}
+
+#admin-menubar .admin-menu li a:hover{
+    color: #fff;
+    background-color: 	#343A40;
+}
+
+#admin-content{
+    padding: 20px 0;
+    /* min-height: 350px; */
+}
+
+#admin-content .admin-heading{
+    font-size: 30px;
+    margin: 35px 0 35px;
+    font-family: montserrat;
+    font-weight: bold;s
+    text-align: center;
+
+}
+
+#admin-content .add-new{
+    color: #fff;
+    background-color: #343A40;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    /* margin: 0 0 20px; */
+    display: block;
+    transition: all 0.3s;
+}
+#admin-content .add-new:hover{
+    text-shadow: 0 0 3px #000;
+    box-shadow: 3px 3px 0 #343A40;
+}
+
+#admin-content .content-table{
+    border: 1px solid #000;
+    width: 100%;
+    margin: 0 0 20px;
+}
+
+#admin-content .content-table thead{
+    color: #fff;
+    background-color: #343A40;
+}
+
+#admin-content .content-table th{
+    padding: 10px;
+    border: 1px solid #fff;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#admin-content .content-table tbody{
+    color: #333;
+}
+
+#admin-content .content-table tbody tr{
+    background-color: #e7e7e7;
+}
+#admin-content .content-table tbody tr:nth-child(even){
+    background-color: transparent;
+}
+#admin-content .content-table tbody td{
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+
+
+}
+
+#admin-content .content-table tbody td:nth-child(2){
+    text-align: left;
+}
+
+#admin-content .admin-pagination{
+    margin: 0;
+}
+#admin-content .admin-pagination li a{
+    display: block;
+}
+
+.id,
+.edit,
+.delete{
+    text-align:center;
+}
+
+form{
+    background: #fff;
+    padding: 25px;
+    box-shadow:0 1px 3px #343A40;
+}
+
+/* ===================== */
+/* ADMIN Panel CSS END */
+/* ===================== */
+
+
+/* Pagination  Styling */
+.pagination {
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+
+.pagination li {
+    display:inline-block;
+    margin: 0 5px 0 0;
+}
+
+.pagination li a{
+    border: none;
+    background: #343A40;
+    color: #fff;
+}
+
+.pagination li a:hover,
+.pagination > li > a:focus{
+    color:#fff;
+    background 	:#343A40;
+}
+
+.page_links {
+    background-color: #ccc;
+    font-family: arial, verdana;
+    font-size: 12px;
+    text-decoration: none;
+    border:1px solid #000;
+    padding: 6px;
+    margin: 3px;
+}
+
+#page_a_link{
+    font-size: 12px;
+    border:1px #000000 solid;
+    color:#000;
+    background-color: #343A40;
+    padding: 6px;
+    margin: 3px;
+    text-decoration: none;
+}
+
+i.fa{
+    color:#222;
+}
+
+
+
+/* Footer Styling */
+#footer{
+    color: #fff;
+    padding:15px 0;
+    text-align:center;
+    background-color: #343A40;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer  a{
+    color:#fff;
+}
+
+#footer  span  a:hover{
+    text-decoration: underline;
+}
+
+
+/* ===================== */
+/* FrontEnd CSS END */
+/* ===================== */

@@ -1,0 +1,95 @@
+
+<!-- header -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{params['blog_name']}}</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<!-- <link rel="stylesheet" href="Hovereffect.css"> -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/Hover.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/apply-styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/updatedstyles.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/contact-styles.css') }}"> -->
+    
+	<!-- <link rel="html" href="news.html"> -->
+</head>
+<body>
+    <div class = "container">
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light nav-font">
+	<!-- <nav class="navbar navbar-custom"> -->
+    <!-- <a class="navbar-brand font" href="index.php">Pak Citizen</a> -->
+
+    
+     <a class="navbar-brand" href="/"> <img src="{{ url_for('static',filename='images/Logo.png') }}" alt="Menu Logo"> </a>
+		
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle    navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav fancy-nav">
+      <a class="nav-item nav-link active " href="/"><b>Home</b><span class="sr-only">(current)</span></a>
+	  {% for item in category %}
+			    <a class="nav-item nav-link active" href="{{params['url']}}/category/{{item[0]}}"><b>{{item[1]}}</b> </a>
+			{% endfor %}
+			<a class="nav-item nav-link active" href="{{params['url']}}/contact"><b>Contact</b></a>
+			<a class="nav-item nav-link active" href="{{params['url']}}/about"><b>About</b></a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			<a href="/admin" > <button class = "btn btn-success">Login</button></a> &emsp; 
+			<a href="/apply" > <button class = "btn btn-dark">Apply Now</button></a>
+    </div>
+    </div>
+    </nav>
+</div>
+	<!-- Navigation end -->
+
+{% block body %}             {% endblock %}
+
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row padding text-center">
+			<!-- col1 -->
+			<div class="col-md-4">
+
+				<hr class="light"> <h5>CONTACT</h5> <hr class="light">
+				<p>0331-5323362</p>
+				<p>Uzairsultan10@gmail.com</p>
+				<p>house 1703, Road 17, TIP.Haripur</p>
+			</div>
+
+			<!-- col2 -->
+			<div class="col-md-4">
+				<hr class="light font"> <h5>HOURS</h5> <hr class="light">
+				<p>Monday 9am</p>
+				<p>Saturday 10am</p>
+				<p>Sunday Closed</p>
+			</div>
+
+			<!-- col3 -->
+			<div class="col-md-4">
+				<hr class="light font"> <h5>AREAS</h5> <hr class="light">
+				<p>Peshawar</p>
+				<p>Charsada</p>
+				<p>Haripur</p>
+			</div>
+
+			<div class="col-12">
+				<hr class="light">
+				<p>&copy; PakCitizen.com</p>
+				<p>Developers: Uzair Sultan - Hajra Khan - Waleed Shah</p>
+
+			</div>
+
+		</div>
+	</div>
+</footer>
+</html>
+</body>
+</html>

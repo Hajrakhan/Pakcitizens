@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block body %}
+
+		<br><br>
+  		<div class="container padding">
+  			<div class="row padding">
+
+  				<div class="col-lg-6">
+					
+  					<img class="img-fluid" src="{{ url_for('static',filename='images/About.jpg') }}" alt="The Citizen Text image">
+  				</div>
+          <!-- 2 column section  -->
+  				<div class="col-lg-6">
+  					<br><br>
+  					<h4 class="font">PAK CITIZEN</h4>
+  					<br>
+  					Pak Citizen is an Online News Portal which aims to provide World-Wide News in the most entertaining way possible.
+It is devloped by the students of Department of Computer Systems Engineering, University of Engineering and Technology Peshawar.<br>
+  					
+
+  				</div>
+          <!-- 2 column section end -->
+
+  			</div>
+				<br><br>
+
+        <!-- Header -->
+<header class=" back text-center py-5 mb-4">
+<!-- <header class="text-center py-5 mb-4"> -->
+  <div class="container">
+    <h4 class="font-weight-light text-white font">Team PakCitizen</h4>
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+
+
+
+	<!-- Meet Our Team -->
+
+	<section class="team section">
+	    <div class="container">
+
+	        <div class="row">
+	            <div class="col-md-4 col-sm-6 col-xs-12">
+	                <div class="team-item">
+	                    <figure>
+	                        <img src="{{ url_for('static',filename='images/uzair.jpg') }}" alt="">
+	                        <figcaption>
+	                            <div class="info">
+	                                <h3>Uzair Sultan</h3>
+	                                <p>Designer/Developer</p>
+	                            </div>
+	                            <div class="social">
+	                                <a href="https://www.instagram.com/uzairsultaan/" class="instagram" data-abc="true"><i class="fab fa-instagram"></i></a>
+									<a href="https://www.facebook.com/uzaii10/" class="facebook" data-abc="true"><i class="fab fa-facebook"></i></a>
+
+	                            </div>
+	                        </figcaption>
+	                    </figure>
+	                </div>
+	            </div>
+	            <div class="col-md-4 col-sm-6 col-xs-12">
+	                <div class="team-item">
+	                    <figure>
+	                        <img src="{{ url_for('static',filename='images/hajrA.jpg') }}" alt="" height="410px" >
+	                        <figcaption>
+	                            <div class="info">
+	                                <h3>Hajra Khan</h3>
+	                                <p>Back-End Developer</p>
+	                            </div>
+	                            <div class="social">
+	                                <a href="https://www.facebook.com/hajra.khan.75839" class="facebook" data-abc="true"><i class="fab fa-facebook"></i></a>
+
+	                            </div>
+	                        </figcaption>
+	                    </figure>
+	                </div>
+	            </div>
+	            <div class="col-md-4 col-sm-6 col-xs-12">
+	                <div class="team-item">
+	                    <figure>
+	                        <img src="{{ url_for('static',filename='images/waleed.jpg') }}" alt="">
+	                        <figcaption>
+	                            <div class="info">
+	                                <h3>Waleed Shah</h3>
+	                                <p>Developer</p>
+	                            </div>
+	                            <div class="social">
+	                                <a href="https://www.facebook.com/syedwaleed36" class="facebook" data-abc="true"><i class="fab fa-facebook"></i></a>
+	                            </div>
+	                        </figcaption>
+	                    </figure>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+	<!-- End Meet Our Team -->
+
+
+</div>
+<!-- /.container -->
+
+
+
+  		</div>
+      <!-- container end -->
+
+
+			<!--- Connect -->
+			<div class="container-fluid padding">
+				<div class="row text-center padding">
+					<div class="col-12">
+						<h3 class="font">Connect</h3>
+                        <p> Contact us on any of the mentioned details for promotions and advertisements, Thank you.</p>
+					</div>
+
+					<div class="col-12 social padding">
+						<a href="#"><i id="social-fb" class="fab fa-facebook-square fa-3x social"></i></a>
+						<a href="#"><i id="social-tw" class="fab fa-twitter-square fa-3x social"></i></a>
+						<a href="@"><i id="social-gp" class="fab fa-google-plus-square fa-3x social"></i></a>
+						<a href="#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+					</div>
+				</div>
+			</div>
+			</div>
+
+
+
+			{% endblock %}
+

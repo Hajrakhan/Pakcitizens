@@ -1,0 +1,32 @@
+{% extends "admin/layout_admin.html" %}
+{% block body %}
+<div id="admin-content">
+  <div class="container">
+  <div class="row">
+        <div class="col-md-8">
+            <h1 class="admin-heading">Update</h1>
+        </div>
+</br>
+    <div class="col-md-offset-3 col-md-6">
+        <!-- Form for show edit-->
+        <form action="/update_post_save" method="POST" enctype="multipart/form-data" autocomplete="off">
+            <div class="form-group">
+                <input type="hidden" name="post_id"  class="form-control" value="{{news[0][0]}}" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputTile">Title</label>
+                <input type="text" name="post_title"  class="form-control" id="exampleInputUsername" value="{{news[0][1]}}">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1"> Description</label>
+                <textarea name="postdesc" class="form-control"  required rows="5">{{news[0][2]}}
+                   </textarea>
+            </div>
+            <input type="submit" name="submit" class="btn btn-primary" value="Update"/>
+        </form>
+        <!-- Form End -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

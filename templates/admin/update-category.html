@@ -1,0 +1,27 @@
+{% extends "admin/layout_admin.html" %}
+{% block body %}  
+  <div id="admin-content">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h1 class="adin-heading"> Update Category</h1>
+              </div>
+              <div class="col-md-offset-3 col-md-6">
+                  <form action="/category_update_save" method ="POST">
+                    
+                      <div class="form-group">
+                          <input type="hidden" name="cat_id"  class="form-control" value="{{category[0][0]}}" placeholder="">
+                      </div>
+                      <div class="form-group">
+                          <label>Category Name</label>
+                          <input type="text" name="cat_name" class="form-control" value="{{category[0][1]}}"  placeholder="{{category[0][1]}}" required>
+                      </div>
+                      <input type="submit" name="submit" class="btn btn-primary" value="Update" required />
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% endblock %}
