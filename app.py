@@ -329,5 +329,9 @@ def logout():
     session.pop('user', None)
     return render_template('admin/index.html')
 
+app.route('/hajr')
+def updatepost():
+    return render_template('hell.html')
+
 if __name__ == '__main__':
    app.run(debug=True)
